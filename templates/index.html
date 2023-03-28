@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Monitor</title>
+{% endblock %}
+
+{% block body %} 
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>PID</td>
+            <td>EXE</td>
+        </tr>
+        {% for proc in proc_list %}
+        <tr>
+            <td>{{proc[0]}}</td>
+            <td>{{proc[1]}}</td>
+            <td>{{proc[2]}}</td>
+        </tr>
+        {% endfor%}
+    </table>
+    
+{% endblock %}
